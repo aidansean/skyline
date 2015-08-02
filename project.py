@@ -3,10 +3,13 @@ from project_module import project_object, image_object, link_object, challenge_
 p = project_object('skyline', 'Skyline generator')
 p.domain = 'http://www.aidansean.com/'
 p.path = 'skyline'
-p.preview_image_ = image_object('http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg', 408, 287)
+p.preview_image    = image_object('%s/images/project.jpg'   %p.path, 150, 250)
+p.preview_image_bw = image_object('%s/images/project_bw.jpg'%p.path, 150, 250)
 p.folder_name = 'aidansean'
 p.github_repo_name = 'skyline'
 p.mathjax = False
+p.tags = 'Maths,Toys'
+p.technologies = 'canvas,CSS,HTML,JavaScript'
 p.links.append(link_object(p.domain, 'skyline', 'Live page'))
 p.introduction = 'One of the features I want on my webpage is the silhouette of a skyline to use as background image.  This project is aimed at allowing the user to draw a complex skyline, with the possibilty for animation.'
 p.overview = '''The user can create individual "buildings" with many layers, and then arrange the buildings into a skyline to generate an image.  If possible, the user can animate the image (for example adding lights at night, allowing the sky to change to match the time of day.)
